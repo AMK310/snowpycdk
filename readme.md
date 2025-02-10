@@ -1,4 +1,4 @@
-# Data Pipeline: Snowflake to Parquet & BigQuery
+# SnowPyCdk: Snowflake to Parquet & BigQuery
 
 This project defines an ETL pipeline that extracts data from a Snowflake data warehouse, transforms it as necessary, and writes the results to both Parquet and BigQuery destinations. The pipeline utilizes the Airbyte platform to orchestrate the data flow, with Python connectors for Snowflake, Parquet, and BigQuery.
 
@@ -27,17 +27,17 @@ This project requires the following Python packages:
 To get started, clone this repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/yourusername/data-pipeline.git
-cd data-pipeline
+git clone https://github.com/yourusername/snowpycdk.git
+cd snowpycdk
 devbox enter
+```
 
 ## Usage
 
 To run the pipeline, execute the `main.py` script:
-
 ```bash
 python main.py
-
+```
 ## Pipeline Execution Steps
 
 When running `main.py`, the following steps are performed:
@@ -70,13 +70,14 @@ config = {
     "bigquery_dataset": "your_dataset",
     "bigquery_table": "your_table"
 }
+```
 ## Authentication for BigQuery
 
 To enable writing to BigQuery, set up authentication using Google Cloud SDK:
 
 ```bash
 export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service-account.json"
-
+```
 ## Error Handling
 
 If any issue occurs, errors will be displayed in the console log. Common troubleshooting steps:
