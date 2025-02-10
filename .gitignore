@@ -1,0 +1,34 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pdb
+*.egg-info/
+dist/
+build/
+eggs/
+*.log
+*.bak
+*.swp
+
+# Devbox
+.devbox/
+
+# Environment files
+*.env
+*.venv
+venv/
+
+# Parquet files
+output.parquet
+
+# IDEs
+.vscode/
+.idea/
+
+# MacOS
+.DS_Store
+
+# Jupyter notebooks
+.ipynb_checkpoints/

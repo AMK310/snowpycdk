@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetpack-io/devbox/0.10.4/.schema/devbox.schema.json",
+  "packages": [
+    "python311@latest",
+    "poetry",
+    "stdenv.cc.cc.lib",
+    "python311Packages.pandas@2.2.2",
+    "python311Packages.numpy@1.26.4"
+  ],
+  "shell": {
+    "init_hook": [
+      ". ${VENV_DIR}/bin/activate",
+      "export LD_LIBRARY_PATH=`pwd`/.devbox/nix/profile/default/lib:${LD_LIBRARY_PATH}"
+    ],
+    "scripts": {
+      "init-environment": [
+        "poetry config virtualenvs.prefer-active-python true",
+        "poetry config virtualenvs.in-project true",
+        "poetry install --no-root"
+      ]
+    }
+  }
+}
